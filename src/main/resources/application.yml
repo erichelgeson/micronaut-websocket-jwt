@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: ws
+  server:
+    port: 9999
+  security:
+    enabled: true
+    endpoints:
+      login:
+        enabled: true
+      oauth:
+        enabled: true
+    token:
+      jwt:
+        bearer:
+          prefix: ''
+          header-name: Sec-WebSocket-Protocol
+        enabled: true
+        signatures:
+          secret:
+            generator:
+              secret: 8CDN596QzDzBC7oeCuwb4uGsRKiuQ1dz
